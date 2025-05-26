@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add or edit user</title>
+    <link rel="stylesheet" href="../../dist/userForm/userForm.css">
+    <script src="korisnikForm.js" defer></script>
+</head>
+<body>
+    <div>
+        <form id="form">
+            <label for="korisnickoIme">Username:</label>
+            <input id="korisnickoIme" name="korisnickoIme" type="text" />
+            <span id="korisnickoImeError"></span>
+            <br />
+
+            <label for="ime">Name:</label>
+            <input id="ime" name="ime" type="text" />
+            <span id="imeError"></span>
+            <br />
+
+            <label for="prezime">Surname:</label>
+            <input id="prezime" name="prezime" type="text" />
+            <span id="prezimeError"></span>
+            <br />
+
+            <label for="datumRodjenja">Birthdate:</label>
+            <input id="datumRodjenja" name="datumRodjenja" type="date" />
+            <span id="datumRodjenjaError"></span>
+            <br />
+        </form>
+        <div class="actions">
+            <button id="submitBtn">Submit</button>
+            <button id="cancelBtn">Cancel</button>
+        </div>
+    </div>
+</body>
+</html>
