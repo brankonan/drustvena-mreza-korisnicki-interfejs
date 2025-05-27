@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Groups</title>
+        <link rel="stylesheet" href="../../dist/groups/group.css">
+    </head>
+    <body>
+        <h1>Groups</h1>
+        <button id="addBtn">Add new group</button>    
+        <p id="no-data-message" class="hidden">No data to display</p>
+            
+        <div id="table-details">
+            <table>
+                <thead class="hidden">
+                    <tr>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Delete</th>
+                    </tr>            
+                </thead>
+                <tbody id="groups-table-body">
+                        <!-- ovo se popunjava kroz js -->
+                </tbody>
+            </table>
+        </div>
+       
+        <script src="group.js"></script>
+    </body>
+</html>
