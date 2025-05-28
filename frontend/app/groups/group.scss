@@ -1,0 +1,16 @@
+@use "../styles/global";
+
+
+h1 {
+    color: global.$primary-color;
+    text-align: center;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+}
+
+p {
+    text-align: center;
+}

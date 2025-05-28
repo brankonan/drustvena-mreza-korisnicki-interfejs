@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../dist/groupsForm/groupsForm.css">
+        <title>Add group</title>
+        <script src="groupsForm.js" defer></script>
+    </head>
+    <body>
+        <div>
+            <form id="groupForm">
+                <label for="name">Group name:</label>
+                <input type="text" name="name" id="name">
+
+                <span id="nameError"></span>
+                <br />
+
+                <label for="date">Date:</label>
+                <input type="date" name="date" id="date">
+
+                <span id="dateError"></span>
+                <br />
+            </form>
+            <div class="actionBtns">
+            <button id="submitBtn">Submit</button>
+            <button id="cancelBtn">Cancel</button>
+        </div>
+        </div>
+        <!-- <script src="groupsForm.js"></script> -->
+    </body>
+</html>

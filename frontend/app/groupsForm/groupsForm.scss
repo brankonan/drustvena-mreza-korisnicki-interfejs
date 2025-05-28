@@ -1,0 +1,16 @@
+@use '../styles/global';
+
+span {
+    color: global.$warn-color;
+}
+
+div {
+    margin: 25px;
+}
+
+.actionBtns {
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
