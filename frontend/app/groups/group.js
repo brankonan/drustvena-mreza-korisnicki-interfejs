@@ -27,6 +27,11 @@ function renderData(data){
     let tHeader = document.querySelector('table thead')
     let noDataMess = document.querySelector('#no-data-message')
 
+    let addBtn = document.querySelector('#addBtn')
+    addBtn.addEventListener('click', function(){
+        window.location.href = '../groupsForm/groupsForm.html'
+    })
+
     if(data.length === 0){
         tHeader.classList.add('hidden')
         noDataMess.classList.remove('hidden')
