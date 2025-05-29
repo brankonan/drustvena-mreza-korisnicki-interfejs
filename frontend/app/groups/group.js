@@ -53,7 +53,7 @@ function renderData(data){
             detailsBtn.textContent = 'Detalji'
             detailsBtn.addEventListener('click', function() {
                 //otvara se stranica clanova te grupe i prosledi se gruopId kao query parametar
-                window.location.href = '../gruopMembers.gruopMemebers.html?gruopId=' + group['id']
+                window.location.href = '../groupMembers/groupMembers.html?groupId=' + group['id']
             })
             tdDetails.appendChild(detailsBtn)
 

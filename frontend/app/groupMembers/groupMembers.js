@@ -36,12 +36,6 @@ function renderData(data) {
         noDataMessage.classList.add('hidden')
         tableHeader.classList.remove('hidden')
 
-
-        //  tr.addEventListener('click', function(){
-        //         const groupId = group['id']
-        //         window.location.href = '../groupMembers/groupMembers.html?groupId=${groupId}'
-        //     })
-
         data.forEach(user => {
             let newRow = document.createElement('tr')
 
