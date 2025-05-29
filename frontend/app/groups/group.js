@@ -43,6 +43,20 @@ function renderData(data){
         data.forEach(group => {
             let tr = document.createElement('tr')
 
+            // tr.addEventListener('click', function(){
+            //     const groupId = group['id']
+            //     window.location.href = '../groupMembers/groupMembers.html?groupId=' + groupId
+            // })
+
+            let tdDetails = document.createElement('td')
+            let detailsBtn = document.createElement('button')
+            detailsBtn.textContent = 'Detalji'
+            detailsBtn.addEventListener('click', function() {
+                //otvara se stranica clanova te grupe i prosledi se gruopId kao query parametar
+                window.location.href = '../gruopMembers.gruopMemebers.html?gruopId=' + group['id']
+            })
+            tdDetails.appendChild(detailsBtn)
+
             let groupName = document.createElement('td')
             groupName.textContent = group['ime']
 
@@ -73,9 +87,11 @@ function renderData(data){
                     })
             })
             tdDel.appendChild(deleteBtn)
+            
 
             tr.appendChild(groupName)
             tr.appendChild(groupDate)
+            tr.appendChild(tdDetails)
             tr.appendChild(tdDel)
             table.appendChild(tr)
 

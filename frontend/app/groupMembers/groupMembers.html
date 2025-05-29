@@ -3,29 +3,28 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Groups</title>
-        <link rel="stylesheet" href="../../dist/groups/group.css">
+        <title>Group members</title>
+        <link rel="stylesheet" href="../../dist/groupMembers/groupMembers.css">
     </head>
     <body>
-        <h1>Groups</h1>
-        <button id="addBtn">Add new group</button>    
+        <h1>Group members</h1>
         <p id="no-data-message" class="hidden">No data to display</p>
-            
+
         <div id="table-details">
             <table>
                 <thead class="hidden">
                     <tr>
-                        <th>Name</th>
-                        <th>Date</th>
-                        <th>Details</th>
-                        <th>Delete</th>
-                    </tr>            
+                    <th>Username</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Birthdate</th>
+                    </tr>
                 </thead>
                 <tbody id="groups-table-body">
                 </tbody>
             </table>
         </div>
-       
-        <script src="group.js"></script>
+
+        <script src="groupMembers.js"></script>
     </body>
 </html>
