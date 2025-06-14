@@ -43,11 +43,6 @@ function renderData(data){
         data.forEach(group => {
             let tr = document.createElement('tr')
 
-            // tr.addEventListener('click', function(){
-            //     const groupId = group['id']
-            //     window.location.href = '../groupMembers/groupMembers.html?groupId=' + groupId
-            // })
-
             let tdDetails = document.createElement('td')
             let detailsBtn = document.createElement('button')
             detailsBtn.textContent = 'Detalji'
