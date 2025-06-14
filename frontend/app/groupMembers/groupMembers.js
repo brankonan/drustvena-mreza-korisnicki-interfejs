@@ -147,7 +147,38 @@ function renderData(data) {
             cell4.textContent = user.datum ? user.datum.substring(0, 10) : ""
             newRow.appendChild(cell4)
 
-            table.appendChild(newRow)
+            let cell5 = document.createElement('td');
+            let deleteBtn = document.createElement('button');
+            deleteBtn.textContent = 'Delete';
+            deleteBtn.addEventListener('click', function() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const groupId = urlParams.get('groupId');
+
+                fetch(`http://localhost:18407/api/grupe/${groupId}/korisnici/${user.id}`, {
+                    method: 'DELETE'
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        if (response.status === 404) {
+                            throw new Error('Korisnik ili grupa nisu pronađeni.');
+                        } else {
+                            throw new Error('Greška prilikom uklanjanja korisnika iz grupe.');
+                        }
+                    }
+                })
+                .then(() => {
+                    alert(`Korisnik ${user.korisnickoIme} je uspešno uklonjen iz grupe ${groupId}.`);
+                    getAllMembers(); 
+                })
+                .catch(error => {
+                    console.error('Greška:', error.message);
+                    alert(error.message);
+                });
+            });
+            cell5.appendChild(deleteBtn);
+            newRow.appendChild(cell5);
+
+            table.appendChild(newRow);
         })
     }
 }
